@@ -1,5 +1,5 @@
-
-/*
+/* All rights reserved.
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *
@@ -27,54 +27,49 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+#ifndef ALUMNO_H   /*! @cond    */
+#define ALUMNO_H   /*! @endcond */
+
+/** @file alumno.h
  **
- ** @brief Plantilla de archivos fuente
+ ** @brief Achivos de cabecera 
  **
- ** Plantilla para los archivos de codigo fuente de prácticos de las 
- ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
- ** de Tiempo Real dictadas en de la Especialización en Integración de
- ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
- ** |  1 | 2022.08.27 | Sherrera    | Version inicial del archivo             |
+ ** |  1 | 2022.08.27 | sherrera    | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla Plantilals de Archivos
- ** @brief Plantillas de archivos normalizadas
+ ** @defgroup 
+ ** @brief 
  ** @{ 
  */
 
-/* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
-#include <stdio.h>
-#include "alumno.h"
-/* === Definicion y Macros privados ======================================== */
+/* === Inclusiones de archivos externos ==================================== */
 
-/* === Declaraciones de tipos de datos privados ============================ */
+/* === Cabecera C++ ======================================================== */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-/* === Definiciones de variables privadas ================================== */
+/* === Definicion y Macros publicos ======================================== */
 
-/* === Definiciones de variables publicas ================================== */
+/* == Declaraciones de tipos de datos publicos ============================= */
+struct alumno_s {
+    char apellido[25];
+     char nombres[25];
+    char dni[20];
+};
 
-/* === Declaraciones de funciones privadas ================================= */
+/* === Declaraciones de variables publicas ================================= */
+struct alumno_s alumno;
 
-/* === Definiciones de funciones privadas ================================== */
-
-/* === Definiciones de funciones publicas ================================== */
-int main(){
-    static const struct alumno_s alumno={
-        .apellido="Herrera",
-        .nombres="Sebastian",
-        .dni="23880155" 
-    };
-
-    nombre(&alumno);
-    
-    return 0;
-}
-
+/* === Declaraciones de funciones publicas ================================= */
+void nombre(const struct alumno_s * alumno);
 /* === Ciere de documentacion ============================================== */
+#ifdef __cplusplus
+}
+#endif
 
 /** @} Final de la definición del modulo para doxygen */
 
+#endif   /* ALUMNO_H */

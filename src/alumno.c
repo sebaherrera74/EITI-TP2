@@ -1,5 +1,5 @@
-
-/*
+/* * All rights reserved.
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *
@@ -27,28 +27,23 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+/** @file alumno.c
  **
- ** @brief Plantilla de archivos fuente
- **
- ** Plantilla para los archivos de codigo fuente de prácticos de las 
- ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
- ** de Tiempo Real dictadas en de la Especialización en Integración de
- ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
+ ** @brief Codigo fuente de las funciones de alumno
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
- ** |  1 | 2022.08.27 | Sherrera    | Version inicial del archivo             |
+ ** |  1 | 2022.08.27 | sherrera    | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla Plantilals de Archivos
- ** @brief Plantillas de archivos normalizadas
- ** @{ 
+ ** @defgroup 
+ ** @brief 
+  ** @{ 
  */
 
 /* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
-#include <stdio.h>
 #include "alumno.h"
+#include <stdio.h>
+
 /* === Definicion y Macros privados ======================================== */
 
 /* === Declaraciones de tipos de datos privados ============================ */
@@ -57,21 +52,17 @@
 
 /* === Definiciones de variables publicas ================================== */
 
+
 /* === Declaraciones de funciones privadas ================================= */
 
 /* === Definiciones de funciones privadas ================================== */
 
 /* === Definiciones de funciones publicas ================================== */
-int main(){
-    static const struct alumno_s alumno={
-        .apellido="Herrera",
-        .nombres="Sebastian",
-        .dni="23880155" 
-    };
+void nombre(const struct alumno_s *  alumno) {
 
-    nombre(&alumno);
-    
-    return 0;
+    printf("Nombre del alumno %s \r\n",alumno->nombres);
+    printf("Apellido del alumno %s \r\n",alumno->apellido);
+    printf("Documento del alumno %s \r\n",alumno->dni);
 }
 
 /* === Ciere de documentacion ============================================== */
