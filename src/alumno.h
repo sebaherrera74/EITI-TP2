@@ -32,15 +32,15 @@
 
 /** @file alumno.h
  **
- ** @brief Achivos de cabecera 
+ ** @brief Cabecera del modulo con las funciones del alumno
  **
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.08.27 | sherrera    | Version inicial del archivo             |
  ** 
- ** @defgroup 
- ** @brief 
+ ** @defgroup  Plantilla de archivos 
+ ** @brief    Plantilas de archivos normalizadas  
  ** @{ 
  */
 
@@ -54,16 +54,26 @@ extern "C" {
 /* === Definicion y Macros publicos ======================================== */
 
 /* == Declaraciones de tipos de datos publicos ============================= */
-struct alumno_s {
-    char apellido[25];
-     char nombres[25];
-    char dni[20];
-};
+
+//! Estructura que contiene los datos del alumno
+typedef struct alumno_s {
+    char apellido[25];    //!< Cadena de caracteres con el apellido del alumno
+     char nombres[25];    //!< Cadena de caracteres con el nombre del alumno
+    char dni[20];         //!< Cadena de caracteres con el DNI del alumno
+}* alumno_t;
 
 /* === Declaraciones de variables publicas ================================= */
-struct alumno_s alumno;
+//struct alumno_s alumno;
 
 /* === Declaraciones de funciones publicas ================================= */
+/**
+ * @brief Funcion para mostrar el nombre del alumno
+ * Esta funcion muestra por pantallla los datos del alumno. 
+ * Debe recibir un puntero a una estructura con los datos del alukno que se quiere mostrar
+ * 
+ * @param alumno  Puntero a la estructura con los datos del alumno
+ */
+
 void nombre(const struct alumno_s * alumno);
 /* === Ciere de documentacion ============================================== */
 #ifdef __cplusplus

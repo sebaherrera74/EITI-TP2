@@ -58,6 +58,7 @@
 /* === Definiciones de funciones privadas ================================== */
 
 /* === Definiciones de funciones publicas ================================== */
+
 void nombre(const struct alumno_s *  alumno) {
 
     printf("Nombre del alumno %s \r\n",alumno->nombres);
